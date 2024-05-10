@@ -1,7 +1,10 @@
 import fasttext
 import pandas as pd
+import os
 
-m=fasttext.load_model("/home/model_dictionary_doYouMean.bin")
+os.system("wget -O model_dictionary_doYouMean.bin --no-check-certificate \'https://drive.google.com/uc?export=download&id=1WElNnOuACT7cCJaNsZoUieTFqRZpevyi\'")
+
+m=fasttext.load_model("model_dictionary_doYouMean.bin")
 
 #input text
 texts='''
